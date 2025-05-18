@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Document Generator API Docs</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <header class="bg-white shadow p-6">
+    <h1 class="text-3xl font-bold">Word Document Generator API</h1>
+    <p class="text-sm text-gray-500">Generate DOCX documents from JSON and Word templates with schema support.</p>
+  </header>
+
+  <main class="p-6 max-w-5xl mx-auto">
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-2">1. Getting Started</h2>
+      <p>To start generating documents, you will need:</p>
+      <ul class="list-disc pl-6">
+        <li>An OAuth2 client credentials token</li>
+        <li>A Word template with content controls</li>
+        <li>A JSON schema and instance data</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-2">2. Authentication</h2>
+      <p>Use OAuth2 Client Credentials to authenticate against the API.</p>
+      <pre class="bg-gray-200 p-4 rounded mt-2 text-sm">POST /oauth2/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=your_client_id
+client_secret=your_secret
+grant_type=client_credentials</pre>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-2">3. Document Generation Endpoint</h2>
+      <p>Submit a POST request to generate a document:</p>
+      <pre class="bg-gray-200 p-4 rounded mt-2 text-sm">POST /api/documents/generate
+Authorization: Bearer {access_token}
+Content-Type: application/json
+
+{
+  "template": "InsurancePolicy.docx",
+  "schema": { /* JSON Schema */ },
+  "data": { /* Instance data */ },
+  "outputFileName": "PolicyOutput.docx"
+}</pre>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-2">4. Example Templates</h2>
+      <ul class="list-disc pl-6">
+        <li><a class="text-blue-600 hover:underline" href="examples/insurance-template.docx">Insurance Policy Template</a></li>
+        <li><a class="text-blue-600 hover:underline" href="examples/bank-statement-template.docx">Bank Statement Template</a></li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-2">5. Postman Collection</h2>
+      <p><a class="text-blue-600 hover:underline" href="postman/collection.json">Download the Postman collection</a> to test endpoints quickly.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">6. Contact & Support</h2>
+      <p>Email: <a href="mailto:support@example.com" class="text-blue-600">support@example.com</a></p>
+    </section>
+  </main>
+</body>
+</html>
