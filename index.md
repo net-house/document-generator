@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Word Document Generator** is a powerful solution that automates the creation of Word and PDF documents using dynamic data and customizable templates. It is designed to empower **business users**—especially in highly regulated sectors like **banking, insurance, and finance**—to manage and format document templates directly in **Microsoft Word**, without constant IT support.
+The **Word Document Generator** is a powerful solution that automates the creation of Word using dynamic data and customizable templates. It is designed to empower **business users**—especially in highly regulated sectors like **banking, insurance, and finance**—to manage and format document templates directly in **Microsoft Word**, without constant IT support.
 
 ### Key Objectives
 - **Automate document creation** to reduce manual editing and errors.
@@ -17,7 +17,7 @@ The backend system uses **JSON Schema** to define document types, enabling flexi
 
 ### Vision & Roadmap
 - **Current**: Available as a Word plugin with a backend deployed via Docker (Azure or on-prem).
-- **Future**: Support for **Web-based Office (Office for the Web)** to allow editing templates in the browser.
+- **Future**: Support for **Web-based Office (Office for the Web)** to allow editing templates in the browser. Support for PDF documents.
 
 ### Target Industries
 This system is ideal for organizations that generate high volumes of client-facing or internal documents:
@@ -38,7 +38,7 @@ This system is ideal for organizations that generate high volumes of client-faci
 - **Dynamic formatting** for dates, numbers, strings
 - **REST API** for document generation
 - **Authentication via OAuth2** (Azure Entra supported)
-- **Support for DOCX and PDF outputs**
+- **Support for DOCX**
 
 ### Technical Architecture
 - **Word Template Designer Add-in** communicates with the **DocGen API**.
