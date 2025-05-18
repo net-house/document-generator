@@ -1,74 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DocGen Documentation</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-    }
-    h1, h2, h3 {
-      color: #333;
-    }
-    nav ul {
-      padding: 0;
-      list-style: none;
-    }
-    nav ul li {
-      margin: 0.5rem 0;
-    }
-    a {
-      text-decoration: none;
-      color: #0077cc;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <h1>DocGen Documentation</h1>
-  <nav>
-    <h2>Table of Contents</h2>
-    <ul>
-      <li><a href="#overview">1. Overview</a></li>
-      <li><a href="#installation">2. Installation & Setup</a></li>
-      <li><a href="#api-auth">3. API Authentication</a></li>
-      <li><a href="#api-endpoints">4. API Endpoints</a></li>
-      <li><a href="#json-schema">5. JSON Schema Format</a></li>
-      <li><a href="#template-design">6. Template Design in Word</a></li>
-      <li><a href="#content-controls">7. Content Control Mapping</a></li>
-      <li><a href="#refit-client">8. Refit Client Usage</a></li>
-      <li><a href="#token-provider">9. Token Provider</a></li>
-      <li><a href="#postman">10. Postman Collection</a></li>
-      <li><a href="#examples">11. Example Templates</a></li>
-      <li><a href="#common-errors">12. Common Errors & Debugging</a></li>
-      <li><a href="#formatting-options">13. Formatting Options</a></li>
-      <li><a href="#advanced-controls">14. Advanced Control Types</a></li>
-      <li><a href="#custom-validators">15. Custom Validators</a></li>
-      <li><a href="#deployment">16. Deployment Options</a></li>
-      <li><a href="#security">17. Security Considerations</a></li>
-      <li><a href="#integration">18. Integration with Business Systems</a></li>
-      <li><a href="#faq">19. FAQ</a></li>
-      <li><a href="#contact">20. Contact & Support</a></li>
-    </ul>
-  </nav>
+# Word Document Generator – Documentation
 
-  <section id="overview">
-    <h2>1. Overview</h2>
-    <p>DocGen is a powerful Word document generation system based on content controls, JSON schemas, and Word add-ins. It allows enterprises to standardize document production across legal, insurance, finance, and other high-compliance industries.</p>
-  </section>
+## Overview
 
-  <!-- Additional pages will be inserted here progressively -->
+The **Word Document Generator** is a powerful solution that automates the creation of Word and PDF documents using dynamic data and customizable templates. It is designed to empower **business users**—especially in highly regulated sectors like **banking, insurance, and finance**—to manage and format document templates directly in **Microsoft Word**, without constant IT support.
 
-  <section id="contact">
-    <h2>20. Contact & Support</h2>
-    <p>If you need help, contact us at <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>.</p>
-  </section>
-</body>
-</html>
+### Key Objectives
+- **Automate document creation** to reduce manual editing and errors.
+- **Increase compliance** through structured templates.
+- **Minimize IT involvement**: Business users can create, edit, and manage templates in Word.
+- **Format control**: Users can define string, decimal, and datetime formatting directly in templates.
+
+### Why This Product Exists
+Traditional document generation solutions rely heavily on IT departments to implement every formatting change or new document layout. This solution shifts ownership to business users by leveraging **Word’s familiar interface** while allowing templates to be dynamically filled with structured data.
+
+The backend system uses **JSON Schema** to define document types, enabling flexible, validated data inputs. Combined with a **Word Add-in**, the system allows users to bind schema fields to placeholders in Word, apply formatting, and preview results.
+
+### Vision & Roadmap
+- **Current**: Available as a Word plugin with a backend deployed via Docker (Azure or on-prem).
+- **Future**: Support for **Web-based Office (Office for the Web)** to allow editing templates in the browser.
+
+### Target Industries
+This system is ideal for organizations that generate high volumes of client-facing or internal documents:
+- **Insurance companies**
+- **Banks and financial institutions**
+- **Leasing providers and fintechs**
+
+### Common Use Cases
+- Claims documents
+- Loan agreements
+- Invoices and billing plans
+- Financial reports
+- Customer onboarding forms
+
+### Core Features
+- **Word Add-in** UI for template design
+- **JSON Schema-based** data binding
+- **Dynamic formatting** for dates, numbers, strings
+- **REST API** for document generation
+- **Authentication via OAuth2** (Azure Entra supported)
+- **Support for DOCX and PDF outputs**
+
+### Technical Architecture
+- **Word Template Designer Add-in** communicates with the **DocGen API**.
+- **Templates** are stored on a mounted storage volume (e.g., Azure Files).
+- API can be deployed to **Azure Kubernetes Service (AKS)** or on-prem via **Docker**.
+- **Authentication**: OAuth2-based, tested with **Azure Entra ID**.
+- **CI/CD**: Fully automated deployment via Azure DevOps.
+
+### Technologies Used
+- .NET Core (C#)
+- Office.js for Word Add-in
+- Azure Storage
+- Docker & Kubernetes (AKS)
+- Refit (for API clients)
+- JSON Schema for data validation
+
+### Deployment Options
+- **Cloud**: Azure Kubernetes Service (AKS) with Azure Storage
+- **On-Premises**: Deploy via Docker with a mounted network volume for templates
+
+### Business Model
+- **Enterprise Licensing**
+- Closed source: No open-source release is planned
+
+---
+
+## API Usage
+[TODO – covered in another section.]
+
+## Code Examples
+[TODO – covered in another section.]
+
+## Postman Collection
+[TODO – covered in another section.]
+
+---
+
+> ⚠️ This page is automatically generated. For technical inquiries or feature requests, please contact the product team.
