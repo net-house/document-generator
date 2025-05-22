@@ -45,15 +45,16 @@ This system is ideal for organizations that generate high volumes of client-faci
 - **Templates** are stored on a mounted storage volume (e.g., Azure Files).
 - API can be deployed to **Azure Kubernetes Service (AKS)** or on-prem via **Docker**.
 - **Authentication**: OAuth2-based, tested with **Azure Entra ID**.
-- **CI/CD**: Fully automated deployment via Azure DevOps.
+- **CI/CD**: Fully automated deployment via Azure DevOps to **AKS**.
 
 ### Technologies Used
-- .NET Core (C#)
-- Office.js for Word Add-in
+- .NET Core (C#), API
+- VSTO, WinForms for Word Add-in
+- Azure DevOps, CI/CD
 - Azure Storage
-- Docker & Kubernetes (AKS)
+- Docker & Kubernetes (AKS, on-prem K8S, any other cloud K8S)
 - Refit (for API clients)
-- JSON Schema for data validation
+- JSON Schema for data binding
 
 ### Deployment Options
 - **Cloud**: Azure Kubernetes Service (AKS) with Azure Storage
